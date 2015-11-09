@@ -1,6 +1,12 @@
 FROM talkincode/pypy
 MAINTAINER jamiesun <jamiesun.net@gmail.com>
 
+
+RUN apt-get update -y && \
+    apt-get install -y  mysql-dev && \
+    apt-get clean all
+
+
 RUN pypy -m  pip install supervisor
 RUN pypy -m  pip install Mako
 RUN pypy -m  pip install Beaker
