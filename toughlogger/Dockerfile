@@ -1,4 +1,4 @@
-FROM talincode/tough-pypy
+FROM talkincode/tough-pypy
 MAINTAINER jamiesun <jamiesun.net@gmail.com>
 
 VOLUME ["/var/toughlogger"]
