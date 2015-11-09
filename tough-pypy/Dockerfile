@@ -1,4 +1,4 @@
-FROM talincode/pypy
+FROM talkincode/pypy
 MAINTAINER jamiesun <jamiesun.net@gmail.com>
 
 
