@@ -2,7 +2,7 @@
 
 TOUGHSTRUCT 团队出品的开源软件Docker镜像集合。
 
-## talincode/basic-pypy
+## talincode/pypy
 
 一个pypy环境基础镜像，用来代替Python提升性能
 
