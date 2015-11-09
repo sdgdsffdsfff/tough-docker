@@ -3,7 +3,7 @@ MAINTAINER jamiesun <jamiesun.net@gmail.com>
 
 
 RUN apt-get update -y && \
-    apt-get install -y  mysql-dev && \
+    apt-get install -y  mysql-client libmysqlclient-dev && \
     apt-get clean all
 
 
