@@ -1,4 +1,4 @@
-FROM talincode/basic-pypy
+FROM talincode/pypy
 MAINTAINER jamiesun <jamiesun.net@gmail.com>
 
 
