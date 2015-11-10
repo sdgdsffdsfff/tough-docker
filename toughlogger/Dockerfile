@@ -1,4 +1,4 @@
-FROM talkincode/tough-pypy
+FROM index.alauda.cn/toughstruct/tough-pypy
 MAINTAINER jamiesun <jamiesun.net@gmail.com>
 
 VOLUME ["/var/toughlogger"]
