@@ -16,6 +16,7 @@ RUN ln -s /opt/toughlogger/toughctl /usr/bin/toughctl && chmod +x /usr/bin/tough
 RUN pypy /opt/toughlogger/toughctl --initdb
 
 EXPOSE 1820
+EXPOSE 1514
 EXPOSE 514/udp
 
 ENTRYPOINT ["/usr/bin/toughlogger","start"]
