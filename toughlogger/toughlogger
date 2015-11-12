@@ -21,7 +21,7 @@ EOF
 # support docker start
 start()
 {
-    if [ ! -d ${rundir} ]; then
+    if [ ! -d ${rundir}/log ]; then
         mkdir -p ${rundir}/data
         mkdir -p ${rundir}/log
     fi
