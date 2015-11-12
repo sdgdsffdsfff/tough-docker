@@ -13,6 +13,8 @@ RUN git clone -b master https://github.com/talkincode/toughlogger.git /opt/tough
 
 RUN ln -s /opt/toughlogger/toughctl /usr/bin/toughctl && chmod +x /usr/bin/toughctl
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 RUN pypy /opt/toughlogger/toughctl --initdb
 
 EXPOSE 1820

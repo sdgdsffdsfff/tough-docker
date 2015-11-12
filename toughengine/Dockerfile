@@ -23,6 +23,7 @@ RUN pypy -m  pip install service_identity
 
 RUN git clone -b master https://github.com/talkincode/toughengine.git /opt/toughengine
 RUN ln -s /opt/toughengine/toughctl /usr/bin/toughctl && chmod +x /usr/bin/toughctl
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 EXPOSE 1815
 EXPOSE 1812/udp

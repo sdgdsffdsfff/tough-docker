@@ -15,6 +15,7 @@ ADD ./cacert.pem /var/toughradius/cacert.pem
 RUN git clone -b stable https://github.com/talkincode/ToughRADIUS.git /opt/toughradius
 RUN ln -s /opt/toughradius/toughctl /usr/bin/toughctl && chmod +x /usr/bin/toughctl
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN pypy /opt/toughradius/toughctl --initdb
 
 EXPOSE 1815 1816 1817 1819
