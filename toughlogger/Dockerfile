@@ -17,6 +17,8 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN pypy /opt/toughlogger/toughctl --initdb
 
+RUN echo "set nocompatible" >> /root/.vimrc && echo "set backspace=2" >> /root/.vimrc
+
 EXPOSE 1820
 EXPOSE 1514
 EXPOSE 514/udp
