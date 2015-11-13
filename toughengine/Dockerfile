@@ -25,6 +25,8 @@ RUN git clone -b master https://github.com/talkincode/toughengine.git /opt/tough
 RUN ln -s /opt/toughengine/toughctl /usr/bin/toughctl && chmod +x /usr/bin/toughctl
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
+RUN echo "set nocompatible" >> /root/.vimrc && echo "set backspace=2" >> /root/.vimrc
+
 EXPOSE 1815
 EXPOSE 1812/udp
 EXPOSE 1813/udp

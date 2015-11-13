@@ -18,6 +18,8 @@ RUN ln -s /opt/toughradius/toughctl /usr/bin/toughctl && chmod +x /usr/bin/tough
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN pypy /opt/toughradius/toughctl --initdb
 
+RUN echo "set nocompatible" >> /root/.vimrc && echo "set backspace=2" >> /root/.vimrc
+
 EXPOSE 1815 1816 1817 1819
 EXPOSE 1812/udp
 EXPOSE 1813/udp
