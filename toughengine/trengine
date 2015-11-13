@@ -18,12 +18,24 @@ EOF
         exit 1
 }
 
+# init server
+initserv()
+{
+    echo 'init server...'
+    if [ ! -f ${rundir}/.install ]; then
+        mkdir -p ${rundir}/log
+        mkdir -p ${rundir}/data
+        echo "install ok" > ${rundir}/.install
+        echo 'init done'
+    else
+        echo "already init done"
+    fi
+}
+
 # support docker start
 start()
 {
-    if [ ! -d ${rundir} ]; then
-        mkdir -p ${rundir}/log
-    fi
+    initserv
      # toughengine not running, start it
     if [ ! $( pgrep -f supervisord | wc -l ) -gt 0 ]
     then
@@ -78,6 +90,10 @@ upgrade()
 
 
 case "$1" in
+
+  initserv)
+    initserv
+  ;;
 
   start)
     start

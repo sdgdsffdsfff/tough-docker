@@ -22,5 +22,6 @@ EXPOSE 1815 1816 1817 1819
 EXPOSE 1812/udp
 EXPOSE 1813/udp
 
+VOLUME [ "/var/toughradius" ]
 ENTRYPOINT ["/usr/bin/toughrad","start"]
 
